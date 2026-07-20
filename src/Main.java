@@ -32,11 +32,24 @@ public class Main {
         ModeloDAO.adicionarModelo(corsa);
         */
 
+        /*
+
         Modelo uno = new Modelo("Uno", "FIAT", 2009);
         uno.setIdModelo(1);
         //ModeloDAO.adicionarModelo(uno);
 
-        Estoque estoque_uno = new Estoque(uno, 10);
+        Estoque estoque_uno = new Estoque(uno, 1);
         EstoqueDAO.adicionarEstoque(estoque_uno);
+         */
+
+        Modelo uno = new Modelo("Uno", "FIAT", 2009);
+        uno.setIdModelo(1);
+        Veiculo veiculo = new Veiculo(uno, "647fbamkm7", "KM264NJ", "Roxo", new BigDecimal("12333.45"), 10000, 2011);
+
+        VeiculoDAO.adicionarVeiculo(veiculo);
+
+        System.out.println(veiculo.getIdVeiculo());
+
         }
     }
+

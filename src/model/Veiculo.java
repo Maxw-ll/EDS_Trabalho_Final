@@ -14,7 +14,27 @@ public class Veiculo {
     private Integer quilometragem;
     private String status;
 
+    public Veiculo(Modelo modelo, String chassi, String placa, String cor, BigDecimal preco, Integer quilometragem, Integer anoFabricacao) {
+        this.modelo = modelo;
+        this.chassi = chassi;
+        this.placa = placa;
+        this.cor = cor;
+        this.preco = preco;
+        this.quilometragem = quilometragem;
+        this.anoFabricacao = anoFabricacao;
+    }
+
     //region Gets e Sets
+    public Integer getAnoFabricacao() {
+        return anoFabricacao;
+    }
+
+    public void setAnoFabricacao(Integer anoFabricacao) {
+        this.anoFabricacao = anoFabricacao;
+    }
+
+    private Integer anoFabricacao;
+
     public Integer getIdVeiculo() {
         return idVeiculo;
     }
