@@ -11,7 +11,7 @@ public class ConexaoBanco {
     private static final String NOME_BANCO = "banco_oracle";
     private  String url;
     private String usuario;
-    private String senha;
+    private String senha ;
 
     public void ConexaoBanco(){};
 
@@ -41,7 +41,10 @@ public class ConexaoBanco {
 
     }
 
-    public Connection getConexao() throws SQLException{
+    public static Connection getConexao() throws SQLException{
+        String url = "jdbc:postgresql://" + "" + ":" + PORTA + "/" + NOME_BANCO;;
+        String usuario = "";
+        String senha = "";
         return DriverManager.getConnection(url, usuario, senha);
     }
 

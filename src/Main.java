@@ -1,34 +1,42 @@
+import dao.*;
+import model.*;
 
-import dao.ConexaoBanco;
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ConexaoBanco cnn = new ConexaoBanco();
-        Scanner scn = new Scanner(System.in);
+        /*
+        Perfil mika_perf = new Perfil(2, "VENDEDOR");
 
-        cnn.configurarConexao(scn);
-        try (Connection coneccao = cnn.getConexao()) {
+        Usuario mika = new Usuario(mika_perf, "Mikaell", "12345678442",
+                "mika@gmail.com", "Mika123", "(98) 979028922",
+                LocalDate.of(2000, 1, 1), "Rua Dois",
+                "12", "CO", "Saint Luiz", "Mara", "65000000");
+        UsuarioDAO.adicionar(mika);
 
-            System.out.println(
-                    "Conexão realizada com sucesso!"
-            );
+        Funcionario func_mika = new Funcionario(mika, new BigDecimal("2525.63"), LocalDate.now());
 
-        } catch (SQLException erro) {
-
-            System.out.println(
-                    "Não foi possível conectar ao banco."
-            );
-
-            System.out.println(
-                    "Motivo: " + erro.getMessage()
-            );
+        FuncionarioDAO.adicionarFuncionario(func_mika);
+        */
 
 
+        /*
+        Modelo corsa = new Modelo("Corsa Wind", "Chevrolet", 2010);
+
+        ModeloDAO.adicionarModelo(corsa);
+        */
+
+        Modelo uno = new Modelo("Uno", "FIAT", 2009);
+        uno.setIdModelo(1);
+        //ModeloDAO.adicionarModelo(uno);
+
+        Estoque estoque_uno = new Estoque(uno, 10);
+        EstoqueDAO.adicionarEstoque(estoque_uno);
         }
     }
-}
