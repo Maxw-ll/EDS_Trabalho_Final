@@ -7,26 +7,27 @@ import java.time.LocalDate;
 
 public class Venda {
 
-    private Integer id_venda;
+    private Integer idVenda;
     private Usuario usuarioComprador;
     private Funcionario funcionarioResponsavel;
     private LocalDate dataVenda;
-    private BigDecimal valor_total;
+    private BigDecimal valorTotal;
 
-    public Venda(Usuario usuarioComprador, Funcionario funcionarioResponsavel, LocalDate dataVenda, BigDecimal valor_total) {
+    public Venda(Usuario usuarioComprador, Funcionario funcionarioResponsavel,  BigDecimal valorTotal) {
         this.usuarioComprador = usuarioComprador;
         this.funcionarioResponsavel = funcionarioResponsavel;
-        this.dataVenda = dataVenda;
-        this.valor_total = valor_total;
+        this.valorTotal = valorTotal;
     }
+
 
     //region Gets e Sets
-    public Integer getId_venda() {
-        return id_venda;
+
+    public Integer getIdVenda() {
+        return idVenda;
     }
 
-    public void setId_venda(Integer id_venda) {
-        this.id_venda = id_venda;
+    public void setIdVenda(Integer idVenda) {
+        this.idVenda = idVenda;
     }
 
     public Usuario getUsuarioComprador() {
@@ -53,14 +54,12 @@ public class Venda {
         this.dataVenda = dataVenda;
     }
 
-    public BigDecimal getValor_total() {
-        return valor_total;
+    public BigDecimal getValorTotal() {
+        return valorTotal;
     }
 
-    public void setValor_total(BigDecimal valor_total) {
-        this.valor_total = valor_total;
+    public void setValorTotal(BigDecimal valorTotal) {
+        this.valorTotal = valorTotal;
     }
     //endregion
-
-
 }

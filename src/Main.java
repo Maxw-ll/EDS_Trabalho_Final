@@ -22,6 +22,7 @@ public class Main {
 
         Funcionario func_mika = new Funcionario(mika, new BigDecimal("2525.63"), LocalDate.now());
 
+
         FuncionarioDAO.adicionarFuncionario(func_mika);
         */
 
@@ -46,9 +47,29 @@ public class Main {
         uno.setIdModelo(1);
         Veiculo veiculo = new Veiculo(uno, "647fbamkm7", "KM264NJ", "Roxo", new BigDecimal("12333.45"), 10000, 2011);
 
-        VeiculoDAO.adicionarVeiculo(veiculo);
 
-        System.out.println(veiculo.getIdVeiculo());
+        Perfil max_perf = new Perfil(2, "VENDEDOR");
+
+        Usuario max = new Usuario(max_perf, "Mikaell", "12345678442",
+                "mika@gmail.com", "Mika123", "(98) 979028922",
+                LocalDate.of(2000, 1, 1), "Rua Dois",
+                "12", "CO", "Saint Luiz", "Mara", "65000000");
+
+        max.setIdUsuario(1);
+
+        Perfil mika_perf = new Perfil(2, "VENDEDOR");
+
+        Usuario mika = new Usuario(mika_perf, "Mikaell", "12345678442",
+                "mika@gmail.com", "Mika123", "(98) 979028922",
+                LocalDate.of(2000, 1, 1), "Rua Dois",
+                "12", "CO", "Saint Luiz", "Mara", "65000000");
+
+        Funcionario func_mika = new Funcionario(mika, new BigDecimal("2525.63"), LocalDate.now());
+        func_mika.setIdFuncionario(1);
+
+        Venda venda = new Venda(max, func_mika, new BigDecimal("123434.45"));
+
+        VendaDAO.adicionarVenda(venda);
 
         }
     }
